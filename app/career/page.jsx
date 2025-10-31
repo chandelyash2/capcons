@@ -1,6 +1,7 @@
 import React from 'react'
 import Script from "next/script";
 import { generateWebPageSchema, generateBreadcrumbListSchema } from "@/lib/schema";
+import { IMAGES } from "@/lib/images";
 
 export const metadata = {
   title: "Careers",
@@ -16,7 +17,7 @@ export const metadata = {
     url: "/career",
     images: [
       {
-        url: "/og-image.jpg",
+        url: IMAGES.og,
         width: 1200,
         height: 630,
         alt: "Careers | CapCons",
@@ -27,7 +28,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Careers | CapCons",
     description: "Join the CapCons team. Explore career opportunities and open positions.",
-    images: ["/twitter-image.jpg"],
+    images: [IMAGES.twitter],
   },
 };
 

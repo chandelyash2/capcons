@@ -4,6 +4,7 @@
  */
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://capcons.com";
+const cloudfrontImageBase = "https://assets.capcons.com/images";
 
 export function generateOrganizationSchema() {
   return {
@@ -11,7 +12,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     "name": "CapCons",
     "url": baseUrl,
-    "logo": `${baseUrl}/logo.png`,
+    "logo": `${cloudfrontImageBase}/logo.png`,
     "description": "CapCons - Professional solutions and services for your business needs.",
     "sameAs": [
       `https://twitter.com/capcons`,
@@ -80,7 +81,7 @@ export function generateArticleSchema({
       "name": "CapCons",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
+        "url": `${cloudfrontImageBase}/logo.png`
       }
     },
     "datePublished": publishedDate || new Date().toISOString(),
@@ -89,7 +90,7 @@ export function generateArticleSchema({
       "@type": "WebPage",
       "@id": `${baseUrl}${url}`
     },
-    "image": image ? `${baseUrl}${image}` : `${baseUrl}/og-image.jpg`
+    "image": image ? `${cloudfrontImageBase}/${image.startsWith('/') ? image.slice(1) : image}` : `${cloudfrontImageBase}/og-image.jpg`
   };
 }
 
@@ -130,7 +131,7 @@ export function generateEventSchema({
       "name": "CapCons",
       "url": baseUrl
     },
-    "image": image ? `${baseUrl}${image}` : `${baseUrl}/og-image.jpg`
+    "image": image ? `${cloudfrontImageBase}/${image.startsWith('/') ? image.slice(1) : image}` : `${cloudfrontImageBase}/og-image.jpg`
   };
 }
 
@@ -210,7 +211,7 @@ export function generateVideoObjectSchema({
     "@type": "VideoObject",
     "name": name,
     "description": description,
-    "thumbnailUrl": thumbnailUrl ? `${baseUrl}${thumbnailUrl}` : `${baseUrl}/og-image.jpg`,
+    "thumbnailUrl": thumbnailUrl ? `${cloudfrontImageBase}/${thumbnailUrl.startsWith('/') ? thumbnailUrl.slice(1) : thumbnailUrl}` : `${cloudfrontImageBase}/og-image.jpg`,
     "uploadDate": uploadDate || new Date().toISOString(),
     "duration": duration,
     "contentUrl": `${baseUrl}${url}`,
@@ -220,7 +221,7 @@ export function generateVideoObjectSchema({
       "name": "CapCons",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
+        "url": `${cloudfrontImageBase}/logo.png`
       }
     }
   };

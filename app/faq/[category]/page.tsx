@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from "next";
 import Script from "next/script";
 import { generateFAQPageSchema, generateBreadcrumbListSchema } from "@/lib/schema";
+import { IMAGES } from "@/lib/images";
 
 export async function generateMetadata(
   props: Promise<{ params: { category: string } }>
@@ -25,7 +26,7 @@ export async function generateMetadata(
       url: url,
       images: [
         {
-          url: "/og-image.jpg",
+          url: IMAGES.og,
           width: 1200,
           height: 630,
           alt: `${decodedCategory} FAQ | CapCons`,
@@ -36,7 +37,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: `${decodedCategory} FAQ | CapCons`,
       description: `Find answers to frequently asked questions about ${decodedCategory} at CapCons.`,
-      images: ["/twitter-image.jpg"],
+      images: [IMAGES.twitter],
     },
   };
 }

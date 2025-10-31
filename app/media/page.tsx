@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from "next";
 import Script from "next/script";
 import { generateWebPageSchema, generateBreadcrumbListSchema } from "@/lib/schema";
+import { IMAGES } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Media",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     url: "/media",
     images: [
       {
-        url: "/og-image.jpg",
+        url: IMAGES.og,
         width: 1200,
         height: 630,
         alt: "Media | CapCons",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Media | CapCons",
     description: "Access CapCons media resources, press releases, logos, and brand assets.",
-    images: ["/twitter-image.jpg"],
+    images: [IMAGES.twitter],
   },
 };
 

@@ -2,6 +2,7 @@ import React from 'react'
 import type { Metadata } from "next";
 import Script from "next/script";
 import { generateJobPostingSchema, generateBreadcrumbListSchema } from "@/lib/schema";
+import { IMAGES } from "@/lib/images";
 
 export async function generateMetadata(
   props: Promise<{ params: { slug: string } }>
@@ -25,7 +26,7 @@ export async function generateMetadata(
       url: url,
       images: [
         {
-          url: "/og-image.jpg",
+          url: IMAGES.og,
           width: 1200,
           height: 630,
           alt: `${decodedSlug} | CapCons Careers`,
@@ -36,7 +37,7 @@ export async function generateMetadata(
       card: "summary_large_image",
       title: `${decodedSlug} | CapCons Careers`,
       description: `Apply for ${decodedSlug} position at CapCons. View job requirements and application details.`,
-      images: ["/twitter-image.jpg"],
+      images: [IMAGES.twitter],
     },
   };
 }

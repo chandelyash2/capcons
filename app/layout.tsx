@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Public_Sans } from "next/font/google";
 import "./globals.css";
+import { IMAGES } from "@/lib/images";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     description: "CapCons - Professional solutions and services for your business needs.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: IMAGES.og,
         width: 1200,
         height: 630,
         alt: "CapCons - Your Trusted Partner",
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     creator: "@capcons",
     title: "CapCons - Your Trusted Partner",
     description: "CapCons - Professional solutions and services for your business needs.",
-    images: ["/twitter-image.jpg"],
+    images: [IMAGES.twitter],
   },
   robots: {
     index: true,

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { generateOrganizationSchema, generateWebSiteSchema } from "@/lib/schema";
+import { IMAGES } from "@/lib/images";
+import Image from "@/components/image";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/og-image.jpg",
+        url: IMAGES.og,
         width: 1200,
         height: 630,
         alt: "CapCons - Your Trusted Partner",
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CapCons - Your Trusted Partner",
     description: "Welcome to CapCons - Discover professional solutions and services tailored for your business needs.",
-    images: ["/twitter-image.jpg"],
+    images: [IMAGES.twitter],
   },
 };
 
@@ -47,7 +49,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
-      <div>Developing </div>
+      <Image
+        src="social.png"
+        alt="Hero banner"
+        width={1200}
+        height={630}
+        priority={true}
+      />
     </>
   );
 }
