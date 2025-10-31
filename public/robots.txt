@@ -23,6 +23,6 @@ Allow: /jobs
 Allow: /media
 Allow: /pricing
 
-# Sitemap location (update with your actual sitemap URL when available)
-# Sitemap: https://capcons.com/sitemap.xml
+# Sitemap location
+Sitemap: https://capcons.com/sitemap.xml
 
