@@ -1,67 +1,81 @@
 import React from 'react'
 import type { Metadata } from "next";
-import Script from "next/script";
 import { generateWebPageSchema, generateBreadcrumbListSchema } from "@/lib/schema";
 import { IMAGES } from "@/lib/images";
 
+
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn about CapCons - our mission, vision, and the team dedicated to providing exceptional business solutions and services.",
-  keywords: ["about CapCons", "company", "team", "mission", "vision"],
+  title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+  description:
+    "Capcons fuels creators, entrepreneurs, and storytellers by enabling them to build powerful, interest-driven communities. Discover how we’re transforming social networking into culture-building for the creator economy.",
+  keywords: [
+    "Capcons About Us",
+    "creator communities",
+    "creator monetization",
+    "social networking for creators",
+    "interest-driven communities",
+    "creator economy platform",
+    "build online community",
+    "digital culture",
+    "community growth platform",
+  ],
   alternates: {
-    canonical: "/about-us",
+    canonical: "https://capcons.com/about-us",
   },
   openGraph: {
-    title: "About Us | CapCons",
-    description: "Learn about CapCons - our mission, vision, and the team dedicated to providing exceptional business solutions.",
+    title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+    description:
+      "Discover how Capcons is redefining social networking — from followers to communities, from audiences to loyal circles. Join the future of creator-led culture.",
     type: "website",
-    url: "/about-us",
+    url: "https://capcons.com/about-us",
     images: [
       {
         url: IMAGES.og,
         width: 1200,
         height: 630,
-        alt: "About Us | CapCons",
+        alt: "Capcons - About Us",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | CapCons",
-    description: "Learn about CapCons - our mission, vision, and the team dedicated to providing exceptional business solutions.",
+    title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+    description:
+      "Capcons empowers creators and brands to grow their communities, monetize creativity, and build culture-driven networks.",
     images: [IMAGES.twitter],
   },
 };
 
 const About = () => {
   const webpageSchema = generateWebPageSchema({
-    name: "About Us",
-    description: "Learn about CapCons - our mission, vision, and the team dedicated to providing exceptional business solutions and services.",
-    url: "/about-us"
+    name: "About Capcons",
+    description:
+      "Capcons is the all-in-one community platform empowering creators, entrepreneurs, and storytellers to grow culture-driven circles and monetize their creativity.",
+    url: "https://capcons.com/about-us",
   });
-  
+
   const breadcrumbSchema = generateBreadcrumbListSchema({
     items: [
-      { name: "Home", url: "/" },
-      { name: "About Us", url: "/about-us" }
-    ]
+      { name: "Home", url: "https://capcons.com" },
+      { name: "About Us", url: "https://capcons.com/about-us" },
+    ],
   });
 
   return (
     <>
-      <Script
-        id="webpage-schema"
+      <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([webpageSchema, breadcrumbSchema]),
+        }}
       />
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <div>About</div>
+      <h1>About Us</h1>
+      <p>
+        Capcons is the all-in-one community platform empowering creators, entrepreneurs, and storytellers to grow culture-driven circles and monetize their creativity.
+      </p>
+   
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;
