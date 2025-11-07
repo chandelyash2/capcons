@@ -34,6 +34,7 @@
   --color-button-25: #FCFCFD;
   --color-button-50: #F8F9FC;
   --color-button-100: #EAECF5;
+  --color-footer: #FFF8EC;
   --gradient-primary-600: conic-gradient(from 259.08deg at 50% 50%, #7F56D9 0deg, rgba(127, 86, 217, 0) 360deg);
   --gradient-primary-500: linear-gradient(90deg, #7F56D9 0%, #9E77ED 100%);
   --gradient-primary-700: linear-gradient(45deg, #6941C6 0%, #7F56D9 100%);
