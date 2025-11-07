@@ -34,9 +34,9 @@ export function Footer() {
   return (
     <section className="bg-footer">
       <div className="w-full px-30">
-        <footer className="text-[var(--color-footer-text)]">
+        <footer className="text-[var(--color-footer-text)] text-sm">
           <Separator className="my-14" />
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-start lg:gap-24">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-start lg:gap-32">
             <div className="lg:max-w-xl">
               <div className="flex items-center -ml-2">
                 <Image
@@ -48,10 +48,10 @@ export function Footer() {
                   unoptimized
                 />
               </div>
-              <p className="mt-4 text-left text-sm md:text-base font-sans">
+              <p className="mt-4 text-left font-sans text-sm">
                 A social network built to power creators, communities, and cultures of tomorrow.
               </p>
-              <div className="mt-4 flex flex-wrap items-center gap-4 font-sans">
+              <div className="mt-4 flex flex-wrap items-center gap-4 font-sans text-sm">
                 <a
                   href="https://www.instagram.com/capcons"
                   aria-label="Capcons on Instagram"
@@ -90,13 +90,13 @@ export function Footer() {
                 </a>
               </div>
             </div>
-            <div className="grid gap-5 sm:grid-cols-2 lg:mt-0">
+            <div className="grid gap-3 text-sm sm:grid-cols-2 lg:mt-0">
               {sections.map((section, sectionIdx) => (
-                <div key={sectionIdx} className="mb-4 font-open-sans">
-                  <h3 className="mb-4 font-semibold tracking-tight font-open-sans">
+                <div key={sectionIdx} className="mb-4 font-open-sans text-sm">
+                  <h3 className="mb-4 font-open-sans text-sm font-bold">
                     {section.title}
                   </h3>
-                  <ul className="space-y-2 text-base font-open-sans">
+                  <ul className="space-y-2 font-open-sans">
                     {section.links.map((link, linkIdx) => (
                       <li key={linkIdx} className="hover:text-primary">
                         <Link
@@ -113,7 +113,7 @@ export function Footer() {
             </div>
           </div>
           <Separator className="my-10" />
-          <div className="flex flex-col gap-6 pb-10 text-sm sm:flex-row sm:items-center sm:justify-between font-sans">
+          <div className="flex flex-col gap-6 pb-10 sm:flex-row sm:items-center sm:justify-between font-sans text-sm">
             <p className="text-center sm:text-left">
               © Copyright Capcons Analytics Private Limited
             </p>
