@@ -35,6 +35,7 @@
   --color-button-50: #F8F9FC;
   --color-button-100: #EAECF5;
   --color-footer: #FFF8EC;
+  --color-footer-text: #222222;
   --gradient-primary-600: conic-gradient(from 259.08deg at 50% 50%, #7F56D9 0deg, rgba(127, 86, 217, 0) 360deg);
   --gradient-primary-500: linear-gradient(90deg, #7F56D9 0%, #9E77ED 100%);
   --gradient-primary-700: linear-gradient(45deg, #6941C6 0%, #7F56D9 100%);
@@ -43,26 +44,32 @@
 
  h1 {
     @apply font-bold leading-tight tracking-tight text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   h2 {
     @apply font-semibold leading-tight tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   h3 {
     @apply font-semibold leading-snug tracking-tight text-xl sm:text-2xl md:text-3xl;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   h4 {
     @apply font-medium leading-snug tracking-tight text-lg sm:text-xl md:text-2xl;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   h5 {
     @apply font-medium leading-snug tracking-tight text-base sm:text-lg;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   h6 {
     @apply font-medium leading-snug tracking-tight text-sm sm:text-base;
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
   }
 
   p {
@@ -114,9 +121,8 @@ body {
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
-/* Use Public Sans for headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-public-sans), var(--font-inter), Arial, Helvetica, sans-serif;
+.font-open-sans {
+  font-family: var(--font-open-sans), var(--font-inter), Arial, Helvetica, sans-serif;
 }
 
 :root {

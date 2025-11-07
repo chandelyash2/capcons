@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Public_Sans } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 import { IMAGES } from "@/lib/images";
 import { Footer } from "@/components/footer";
@@ -10,8 +10,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const publicSans = Public_Sans({
-  variable: "--font-public-sans",
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
   subsets: ["latin"],
   display: "swap",
 });
@@ -90,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${publicSans.variable} antialiased`}
+        className={`${inter.variable} ${openSans.variable} antialiased`}
       >
         {children}
         <Footer />
