@@ -46,7 +46,7 @@ const BlogFeature = () => {
             <div
               className={`absolute ${item.position} ${item.color} z-10 px-3`}
             >
-              <p className="text-sm sm:text-base md:text-lg lg:text-3xl font-normal leading-tight max-w-[90%] lg:max-w-[70%]">
+              <p className="text-sm sm:text-base md:text-lg lg:text-3xl font-normal leading-tight max-w-[90%] lg:max-w-[80%]">
                 {item.title}
               </p>
             </div>

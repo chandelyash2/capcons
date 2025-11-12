@@ -18,7 +18,7 @@ const EventCard = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-8 lg:p-10">
+      <div className="absolute inset-0 flex flex-col justify-between p-4 md:p-8 lg:p-10">
         {/* Title */}
         <h2 className="text-white font-semibold text-base md:text-2xl lg:text-3xl leading-snug max-w-5xl">
           FUTURE OF DIGITAL INFLUENCE: NEURO-MARKETING, HYPER-TARGETING &
@@ -54,7 +54,7 @@ const EventCard = () => {
 
         {/* Event Info - Mobile */}
         <div className="flex md:hidden items-center justify-between text-white text-xs sm:text-sm mt-3">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <span>25 May’ 25</span>
             <span>|</span>
             <span>00:00 pm</span>

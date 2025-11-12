@@ -57,7 +57,7 @@ const Blog = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 15 15"
                   fill="none"
-         
+                  className="w-3.5 h-3.5"
                 >
                   <path
                     d="M10.5719 5.5892L4.37375 9.35295M4.37375 9.35295L5.28666 5.61723M4.37375 9.35295L8.10947 10.2659"
@@ -82,7 +82,7 @@ const Blog = () => {
               key={tab.name}
               onClick={() => setActiveTab(tab.name)}
               className={twMerge(
-                "py-2 px-3 md:py-4 md:px-8 border border-gray-300 uppercase rounded-2xl font-medium transition-colors duration-200 text-sm md:text-base",
+                "py-2 px-3 md:py-4 md:px-6 border border-gray-300 uppercase rounded-2xl font-medium transition-colors duration-200 text-sm md:text-base",
                 activeTab === tab.name
                   ? "bg-primary-900 text-white border-primary-900"
                   : "bg-white text-gray-700 hover:bg-gray-50"

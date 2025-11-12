@@ -45,17 +45,17 @@ const Footer = () => {
           <Image
             src="https://assets.capcons.com/images/Play Store.png"
             alt="Get it on Google Play"
-            width={180}
+            width={140}
             height={60}
-            className="h-[50px] w-auto"
+       
             
           />
           <Image
             src="https://assets.capcons.com/images/App Store.png"
             alt="Download on the App Store"
-            width={180}
+            width={140}
             height={60}
-            className="h-[50px] w-auto"
+         
             
           />
         </div>
