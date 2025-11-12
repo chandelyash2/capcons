@@ -38,7 +38,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           fill
           className="rounded-md"
           sizes="(max-width: 768px) 100vw, 514px"
-          unoptimized
+          
       
         />
       </div>

@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
             alt="CapCons logo"
             width={180}
             height={40}
-            unoptimized
+            
             priority
           />
         </a>

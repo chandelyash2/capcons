@@ -13,7 +13,7 @@ const EventCard = () => {
           fill
           className="object-cover object-center"
           priority
-          unoptimized
+          
         />
       </div>
 

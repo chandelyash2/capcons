@@ -48,7 +48,7 @@ const Footer = () => {
             width={180}
             height={60}
             className="h-[50px] w-auto"
-            unoptimized
+            
           />
           <Image
             src="https://assets.capcons.com/images/App Store.png"
@@ -56,7 +56,7 @@ const Footer = () => {
             width={180}
             height={60}
             className="h-[50px] w-auto"
-            unoptimized
+            
           />
         </div>
         <div className="flex gap-3 mb-3">
@@ -69,7 +69,7 @@ const Footer = () => {
               alt="LinkedIn"
               width={15}
               height={15}
-              unoptimized
+              
             />
           </Link>
           <Link
@@ -81,7 +81,7 @@ const Footer = () => {
               alt="Instagram"
               width={15}
               height={15}
-              unoptimized
+              
             />
           </Link>{" "}
           <Link
@@ -93,7 +93,7 @@ const Footer = () => {
               alt="Share"
               width={15}
               height={15}
-              unoptimized
+              
             />
           </Link>
         </div>
@@ -109,7 +109,7 @@ const Footer = () => {
               alt="CapCons logo"
               width={266}
               height={100}
-              unoptimized
+              
             />
           </div>
           <p className="text-sm text-gray-700 text-center md:text-left">
@@ -128,7 +128,7 @@ const Footer = () => {
                 alt="LinkedIn"
                 width={15}
                 height={15}
-                unoptimized
+                
               />
             </Link>
             <Link
@@ -140,7 +140,7 @@ const Footer = () => {
                 alt="Instagram"
                 width={15}
                 height={15}
-                unoptimized
+                
               />
             </Link>{" "}
             <Link
@@ -152,7 +152,7 @@ const Footer = () => {
                 alt="Share"
                 width={15}
                 height={15}
-                unoptimized
+                
               />
             </Link>
           </div>

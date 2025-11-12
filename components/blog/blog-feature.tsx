@@ -57,7 +57,7 @@ const BlogFeature = () => {
               alt={item.title}
               fill
               sizes="(max-width: 768px) 60vw, (max-width: 1200px) 33vw, 400px"
-              unoptimized
+              
             />
           </div>
         ))}

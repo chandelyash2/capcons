@@ -1,10 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  /* Custom config options */
   experimental: {
-    turbopackFileSystemCacheForDev: true 
-  }
+    turbopackFileSystemCacheForDev: true,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "assets.capcons.com",
+      },
+   
+    ],
+  },
 };
 
 export default nextConfig;
