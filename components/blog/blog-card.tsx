@@ -38,16 +38,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
           fill
           className="rounded-md"
           sizes="(max-width: 768px) 100vw, 514px"
-          
-      
         />
       </div>
 
       {/* Content */}
       <div className="py-4">
-        <h3 className="text-lg font-medium text-gray-900">
-          {title}
-        </h3>
+        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
 
         <p className="text-sm text-gray-500 mt-1">
           {author} | {readTime} | {date}

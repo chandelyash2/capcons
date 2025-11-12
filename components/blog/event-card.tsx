@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import Button from "../ui/button";
 
 const EventCard = () => {
   return (
@@ -13,7 +14,6 @@ const EventCard = () => {
           fill
           className="object-cover object-center"
           priority
-          
         />
       </div>
 
@@ -43,12 +43,8 @@ const EventCard = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <p className="font-semibold text-lg lg:text-2xl">
-              ₹ 600.00
-            </p>
-            <button className="bg-secondary-soft text-gray-900 font-medium px-4 py-2 rounded-full text-sm lg:text-base transition hover:opacity-90">
-              View Event
-            </button>
+            <p className="font-semibold text-lg lg:text-2xl">₹ 600.00</p>
+            <Button variant="primary">View Event</Button>
           </div>
         </div>
 
@@ -63,9 +59,7 @@ const EventCard = () => {
           </div>
           <div className="flex items-center gap-2">
             <p className="font-medium text-white">₹ 600.00</p>
-            <button className="bg-secondary-soft text-gray-900 font-medium px-3 py-1 rounded-full text-[10px] sm:text-xs">
-              View Event
-            </button>
+            <Button variant="primary" size="sm">View Event</Button>
           </div>
         </div>
       </div>

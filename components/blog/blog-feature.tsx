@@ -21,7 +21,7 @@ const features = [
     title: "Climb the ladder? Easy peasy",
     color: "text-white",
     position: "bottom-2 lg:bottom-3 left-4 lg:left-8",
-    src: "https://assets.capcons.com/images/BlogFeature3.png",
+    src: "https://assets.capcons.com/images/BlogFeature2.png",
   },
 ];
 

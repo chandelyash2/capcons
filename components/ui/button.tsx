@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
   const sizes: Record<ButtonSize, string> = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-base",
-    lg: "px-8 py-4 text-lg",
+    lg: "px-4 py-2 md:py-3 md:px-6 lg:px-8 lg:py-4 text-lg",
   };
 
   return (
