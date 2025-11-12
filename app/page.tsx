@@ -69,7 +69,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
           Build. Grow. Monetize.
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl mx-auto text-primary-900">
           Capcons is where creators, entrepreneurs, and storytellers build vibrant,
           interest-driven communities that fuel culture and commerce.
         </p>
