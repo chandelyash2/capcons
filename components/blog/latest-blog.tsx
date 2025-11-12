@@ -1,7 +1,7 @@
 import Button from "../ui/button";
 import { Heading } from "../ui/heading";
 import BlogCard from "./blog-card";
-import { blogs } from "./dummyData";
+import { allBlogs, blogs } from "./dummyData";
 
 const LatestBlog = () => {
   return (
@@ -18,7 +18,7 @@ const LatestBlog = () => {
         <span className="bg-secondary-soft ">All</span> Blogs
       </Heading>
       <div className="grid grid-cols-2 gap-4 lg:flex flex-wrap justify-between">
-        {blogs.map((blog, idx) => (
+        {allBlogs.map((blog, idx) => (
           <BlogCard key={idx} {...blog} />
         ))}
       </div>

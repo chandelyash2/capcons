@@ -19,15 +19,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
   excerpt,
 }) => {
   return (
-    <div className="w-full max-w-[360px] bg-white rounded-lg overflow-hidden cursor-pointer">
+    <div className="w-full max-w-[400px] bg-white rounded-lg overflow-hidden cursor-pointer">
       {/* Image */}
       <div
         className="
           relative flex-shrink-0 
           w-[173.332px] h-[109.959px]     /* mobile */
           sm:w-[300px] sm:h-[190px]       /* small tablet */
-          md:w-[400px] md:h-[250px]       /* large tablet */
-          lg:w-[514.208px] lg:h-[326.204px] /* desktop / Figma */
+          md:w-[380px] md:h-[240px]       /* large tablet */
+          lg:w-[420.208px] lg:h-[260.204px] /* desktop / Figma */
           bg-gray-200
           mx-auto
         "
@@ -36,8 +36,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           src={imageSrc}
           alt={title}
           fill
-          className="rounded-md"
-          sizes="(max-width: 768px) 100vw, 514px"
+          className="object-cover object-center rounded-md"
         />
       </div>
 
