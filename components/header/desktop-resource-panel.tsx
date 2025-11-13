@@ -7,8 +7,8 @@ import { Heading } from "../ui/heading";
 export const DesktopResourcesPanel = () => {
   return (
     <div className="
-      fixed left-[20%] top-[72px] 
-      w-[70%] max-w-screen 
+      fixed left-[20%] top-[80px] 
+      w-[65%] max-w-screen 
       bg-white shadow-xl rounded-lg border border-gray-200 
       rounded-b-xl flex items-start gap-6 
       px-8 py-6 z-[999]
