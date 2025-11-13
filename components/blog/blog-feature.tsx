@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
 const features = [
   {
@@ -14,14 +15,14 @@ const features = [
     title: "Climb the ladder? Easy peasy",
     color: "text-white",
     position: "bottom-3 left-4 lg:left-9",
-    src: "https://assets.capcons.com/images/BlogFeature2.png",
+    src: "https://assets.capcons.com/images/Cover.png",
   },
   {
     id: 3,
     title: "Climb the ladder? Easy peasy",
     color: "text-white",
     position: "bottom-2 lg:bottom-3 left-4 lg:left-8",
-    src: "https://assets.capcons.com/images/BlogFeature2.png",
+    src: "https://assets.capcons.com/images/Cover.png",
   },
 ];
 
@@ -31,7 +32,8 @@ const BlogFeature = () => {
       {/* Row layout */}
       <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-4 lg:gap-8 overflow-hidden">
         {features.map((item, index) => (
-          <div
+          <Link
+            href=""
             key={item.id}
             className={`
               relative overflow-hidden 
@@ -39,16 +41,16 @@ const BlogFeature = () => {
               ${index === 2 ? "w-[55%]" : ""}
               ${index === 1 ? "hidden md:block md:w-1/3" : "block"}
               sm:w-[31%] md:w-1/3 lg:w-1/3
-              h-[180px] sm:h-[260px] md:h-[400px] lg:h-[500px]
+              h-[170px] sm:h-[170px] md:h-[210px] lg:h-[320px]
             `}
           >
             {/* Text Overlay */}
             <div
               className={`absolute ${item.position} ${item.color} z-10 px-3`}
             >
-              <p className="text-sm sm:text-base md:text-lg lg:text-3xl font-normal leading-tight max-w-[90%] lg:max-w-[80%]">
+              {/* <p className="text-sm sm:text-base md:text-lg lg:text-3xl font-normal leading-tight max-w-[90%] lg:max-w-[80%]">
                 {item.title}
-              </p>
+              </p> */}
             </div>
 
             {/* Image */}
@@ -57,9 +59,9 @@ const BlogFeature = () => {
               alt={item.title}
               fill
               sizes="(max-width: 768px) 60vw, (max-width: 1200px) 33vw, 400px"
-              
+              className="object-cover"
             />
-          </div>
+          </Link>
         ))}
       </div>
     </section>

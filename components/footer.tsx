@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FFF9F0] text-black border-t border-gray-200 px-10 md:px-16 py-4">
+    <footer className="bg-[#FFF9F0] text-black border-t border-gray-200 px-10 md:px-16 pt-20 pb-4">
       {/* Top Section */}
       <div className="flex flex-col items-center justify-center text-center  space-y-6">
         <h2 className="text-2xl md:text-4xl font-light leading-snug max-w-3xl">
@@ -47,19 +47,15 @@ const Footer = () => {
             alt="Get it on Google Play"
             width={140}
             height={60}
-       
-            
           />
           <Image
             src="https://assets.capcons.com/images/App Store.png"
             alt="Download on the App Store"
             width={140}
             height={60}
-         
-            
           />
         </div>
-        <div className="flex gap-3 mb-3">
+        <div className="flex gap-3 mb-3 md:hidden">
           <Link
             href=""
             className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center"
@@ -69,7 +65,6 @@ const Footer = () => {
               alt="LinkedIn"
               width={15}
               height={15}
-              
             />
           </Link>
           <Link
@@ -81,7 +76,6 @@ const Footer = () => {
               alt="Instagram"
               width={15}
               height={15}
-              
             />
           </Link>{" "}
           <Link
@@ -93,7 +87,6 @@ const Footer = () => {
               alt="Share"
               width={15}
               height={15}
-              
             />
           </Link>
         </div>
@@ -109,10 +102,9 @@ const Footer = () => {
               alt="CapCons logo"
               width={266}
               height={100}
-              
             />
           </div>
-          <p className="text-sm text-gray-700 text-center md:text-left">
+          <p className="text-sm text-gray-700 text-center md:text-left mt-4">
             Strengthen connections, drive engagement, and grow a thriving
             community. Reach your audience, foster loyalty, and monetize — free
             from ads and algorithms.
@@ -128,7 +120,6 @@ const Footer = () => {
                 alt="LinkedIn"
                 width={15}
                 height={15}
-                
               />
             </Link>
             <Link
@@ -140,7 +131,6 @@ const Footer = () => {
                 alt="Instagram"
                 width={15}
                 height={15}
-                
               />
             </Link>{" "}
             <Link
@@ -152,7 +142,6 @@ const Footer = () => {
                 alt="Share"
                 width={15}
                 height={15}
-                
               />
             </Link>
           </div>
@@ -182,9 +171,10 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="border-t border-gray-200 px-6 md:px-16 py-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 space-y-2 md:space-y-0">
-        <div className="flex justify-center w-full md:w-auto">
-          <p className="md:hidden">@Copyright 2025, Capcons</p>
+        <div className="md:hidden flex justify-center w-full md:w-auto">
+          <p>@Copyright 2025, Capcons</p>
         </div>
+        <p className="hidden md:block">Terms & Conditions</p>
         <p className="hidden md:block">
           © Copyright 2025, All Rights Reserved by Capcons
         </p>

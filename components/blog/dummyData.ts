@@ -1,6 +1,6 @@
 export const blogs = [
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "Jesica Koli",
     readTime: "3 Min",
@@ -9,7 +9,7 @@ export const blogs = [
       "Did you come here for something in particular or just general Riker-bashing?",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "John Carter",
     readTime: "5 Min",
@@ -18,7 +18,7 @@ export const blogs = [
       "Learn how optimizing assets and caching strategies can drastically improve load times.",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "John Carter",
     readTime: "5 Min",
@@ -27,7 +27,7 @@ export const blogs = [
       "Learn how optimizing assets and caching strategies can drastically improve load times.",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "Jesica Koli",
     readTime: "3 Min",
@@ -36,7 +36,7 @@ export const blogs = [
       "Did you come here for something in particular or just general Riker-bashing?",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "John Carter",
     readTime: "5 Min",
@@ -45,7 +45,7 @@ export const blogs = [
       "Learn how optimizing assets and caching strategies can drastically improve load times.",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "Jesica Koli",
     readTime: "3 Min",
@@ -54,7 +54,7 @@ export const blogs = [
       "Did you come here for something in particular or just general Riker-bashing?",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "John Carter",
     readTime: "5 Min",
@@ -63,7 +63,7 @@ export const blogs = [
       "Learn how optimizing assets and caching strategies can drastically improve load times.",
   },
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "Jesica Koli",
     readTime: "3 Min",
@@ -73,7 +73,7 @@ export const blogs = [
   },
 
   {
-    imageSrc: "https://assets.capcons.com/images/Dummy.png",
+    imageSrc: "https://assets.capcons.com/images/Latest1.png",
     title: "Set Video Playback Speed With Javascript",
     author: "John Carter",
     readTime: "5 Min",

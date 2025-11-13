@@ -13,10 +13,10 @@ export const Heading = ({
   className,
   children,
 }: HeadingProps) => {
-  const base = "font-sans  tracking-tight";
+  const base = "text-gray-900";
 
   const variants = {
-    h1: "text-3xl md:text-4xl lg:text-5xl font-bold",
+    h1: "text-xl md:text-2xl lg:text-3xl font-bold",
     h2: "font-semibold",
     h3: "text-base md:text-lg font-medium",
     h4: "text-sm md:text-base font-medium",

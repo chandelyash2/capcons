@@ -14,7 +14,7 @@ export const Container: React.FC<ContainerProps> = ({
   return (
     <div
       className={cn(
-        "lg:px-[100px] lg:py-[30px] md:p-[20px] md:px-[50px] p-5 w-full md:mb-[140px]",
+        "lg:px-[100px] lg:py-[30px] md:p-[20px] md:px-[30px] p-5 w-full md:mb-[140px]",
         className
       )}
     >

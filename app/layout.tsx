@@ -1,7 +1,7 @@
 import { Public_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/header";
 import Footer from "@/components/footer";
+import { Header } from "@/components/header/header";
 
 const publicSans = Public_Sans({
   subsets: ["latin"],

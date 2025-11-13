@@ -24,10 +24,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
       <div
         className="
           relative flex-shrink-0 
-          w-[173.332px] h-[109.959px]     /* mobile */
+          w-[163.332px] h-[109.959px]     /* mobile */
           sm:w-[300px] sm:h-[190px]       /* small tablet */
-          md:w-[380px] md:h-[240px]       /* large tablet */
-          lg:w-[420.208px] lg:h-[260.204px] /* desktop / Figma */
+          md:w-[340px] md:h-[240px]       /* large tablet */
+          lg:w-[400.208px] lg:h-[260.204px] /* desktop / Figma */
           bg-gray-200
           mx-auto
         "
@@ -36,21 +36,21 @@ const BlogCard: React.FC<BlogCardProps> = ({
           src={imageSrc}
           alt={title}
           fill
-          className="object-cover object-center rounded-md"
+          className="object-con object-center rounded-md"
         />
       </div>
 
       {/* Content */}
-      <div className="py-4">
-        <h3 className="text-lg font-medium text-gray-900">{title}</h3>
+      <div className="py-2">
+        <h3 className="text-sm md:text-xl font-medium text-gray-900">{title}</h3>
 
-        <p className="text-sm text-gray-500 mt-1">
+        {/* <p className="text-sm text-gray-500 mt-1">
           {author} | {readTime} | {date}
-        </p>
+        </p> */}
 
-        <p className="text-sm text-gray-600 mt-3 leading-relaxed line-clamp-3">
+        {/* <p className="text-sm text-gray-600 mt-3 leading-relaxed line-clamp-3">
           {excerpt}
-        </p>
+        </p> */}
       </div>
     </div>
   );
