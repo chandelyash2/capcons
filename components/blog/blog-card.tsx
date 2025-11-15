@@ -19,30 +19,33 @@ const BlogCard: React.FC<BlogCardProps> = ({
   excerpt,
 }) => {
   return (
-    <div className="w-full max-w-[400px] bg-white rounded-lg overflow-hidden cursor-pointer">
+    <div className="w-full max-w-[410px] bg-white rounded-lg overflow-hidden cursor-pointer">
       {/* Image */}
       <div
         className="
-          relative flex-shrink-0 
-          w-[163.332px] h-[109.959px]     /* mobile */
-          sm:w-[300px] sm:h-[190px]       /* small tablet */
-          md:w-[340px] md:h-[240px]       /* large tablet */
-          lg:w-[400.208px] lg:h-[260.204px] /* desktop / Figma */
-          bg-gray-200
-          mx-auto
-        "
+    relative flex-shrink-0 
+    w-[163.332px] h-[109.959px]
+    sm:w-[300px] sm:h-[190px]
+    md:w-[340px] md:h-[240px]
+    lg:w-[400.208px] lg:h-[260.204px]
+    bg-gray-200
+    mx-auto
+    rounded-lg overflow-hidden   /* <-- Add this */
+  "
       >
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className="object-con object-center rounded-md"
+          className="object-cover" /* optional, recommended */
         />
       </div>
 
       {/* Content */}
       <div className="py-2">
-        <h3 className="text-sm md:text-xl font-medium text-gray-900">{title}</h3>
+        <h3 className="text-sm md:text-xl font-medium text-gray-900">
+          {title}
+        </h3>
 
         {/* <p className="text-sm text-gray-500 mt-1">
           {author} | {readTime} | {date}

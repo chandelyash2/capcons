@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium rounded-xl transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "inline-flex items-center justify-center font-medium rounded-[20px] transition-all focus:outline-none focus:ring-2 focus:ring-offset-2";
 
   const variants: Record<ButtonVariant, string> = {
     primary:
@@ -31,7 +31,7 @@ const Button: React.FC<ButtonProps> = ({
   const sizes: Record<ButtonSize, string> = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-base",
-    lg: "px-4 py-2 md:py-3 md:px-6 lg:px-8 lg:py-4 text-lg",
+    lg: "px-4 py-2 md:py-3 md:px-3 lg:px-5 lg:py-3 text-lg",
   };
 
   return (

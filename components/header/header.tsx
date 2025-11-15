@@ -8,6 +8,8 @@ import { MobileResources } from "./mobile-resouces";
 import { DesktopResources } from "./desktop-resources";
 import { DesktopResourcesPanel } from "./desktop-resource-panel";
 import Button from "../ui/button";
+import Link from "next/link";
+import { Heading } from "../ui/heading";
 
 export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +20,7 @@ export const Header: React.FC = () => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="font-sans bg-white sticky top-0 z-50">
+    <header className="font-sans bg-transprent sticky top-0 z-50">
       <div className="flex items-center justify-between p-4 md:px-[100px]">
         {/* Logo */}
         <a href="/" aria-label="CapCons Home">
@@ -53,9 +55,13 @@ export const Header: React.FC = () => {
 
           <NavLink href="/contact" label="Contact" />
         </nav>
-        <div className="hidden lg:flex gap-4">
-          <Button variant="secondary">Log in</Button>
-          <Button variant="primary">Sign up</Button>
+        <div className="hidden lg:flex gap-4 items-center">
+          <Link href="/login">
+            <Heading as="h3">Log in</Heading>
+          </Link>
+          <Link href="/signup">
+            <Button variant="primary">Sign up</Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -94,6 +100,16 @@ export const Header: React.FC = () => {
           />
 
           <NavLink href="/contact" label="Contact" onClick={closeMenu} />
+          <div className="flex flex-col lg:hidden gap-4 justify-center items-center">
+            <Link href="/signup">
+              <Button variant="primary" >
+                Sign up
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Heading as="h3">Log in</Heading>
+            </Link>
+          </div>
         </nav>
       </div>
     </header>

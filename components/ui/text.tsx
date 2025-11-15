@@ -35,7 +35,7 @@ export const Text = ({
         base,
         sizes[size],
         weights[weight],
-        muted ? "text-gray-600" : "text-gray-900",
+        muted ? "text-gray-600" : "text-gray-700",
         className
       )}
     >
