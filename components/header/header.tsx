@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "./navLink";
 import { twMerge } from "tailwind-merge";
@@ -10,69 +10,91 @@ import { DesktopResourcesPanel } from "./desktop-resource-panel";
 import Button from "../ui/button";
 import Link from "next/link";
 import { Heading } from "../ui/heading";
+import { Container } from "../ui/container";
 
 export const Header: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [resourcesOpenMobile, setResourcesOpenMobile] = useState(false);
   const [hoverResources, setHoverResources] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
+  // Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="font-sans bg-transprent sticky top-0 z-50">
-      <div className="flex items-center justify-between p-4 md:px-[100px]">
-        {/* Logo */}
-        <a href="/" aria-label="CapCons Home">
-          <Image
-            src="https://assets.capcons.com/images/Logo.png"
-            alt="CapCons logo"
-            width={180}
-            height={40}
-            priority
-          />
-        </a>
+    <header
+      className={twMerge(
+        "font-sans sticky top-0 z-50",
+        scrolled ? "bg-white" : "bg-transparent"
+      )}
+    >
+      <Container>
+        <div className="flex items-center justify-between p-4">
+          {/* Logo */}
+          <Link href="/" aria-label="CapCons Home">
+            <Image
+              src="https://assets.capcons.com/images/Logo.png"
+              alt="CapCons logo"
+              width={180}
+              height={40}
+              priority
+            />
+          </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-10 relative">
-          <NavLink href="/features" label="Features" />
-          <NavLink href="/pricing" label="Pricing" />
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center gap-10 relative">
+            <NavLink href="/features" label="Features" />
+            <NavLink href="/pricing" label="Pricing" />
 
-          <div
-            className="group/resources relative"
-            onMouseEnter={() => setHoverResources(true)}
-            onMouseLeave={() => setHoverResources(false)}
-          >
-            {/* the button */}
-            <DesktopResources open={hoverResources} />
+            <div
+              className="group/resources relative"
+              onMouseEnter={() => setHoverResources(true)}
+              onMouseLeave={() => setHoverResources(false)}
+            >
+              {/* the button */}
+              <DesktopResources open={hoverResources} />
 
-            {/* Hover Bridge to prevent closing */}
-            <div className="absolute left-0 top-full w-full h-[40px]"></div>
+              {/* Hover Bridge to prevent closing */}
+              <div className="absolute left-0 top-full w-full h-[40px]"></div>
 
-            {/* DROPDOWN OUTSIDE OF FLOW */}
-            {hoverResources && <DesktopResourcesPanel />}
+              {/* DROPDOWN OUTSIDE OF FLOW */}
+              {hoverResources && <DesktopResourcesPanel />}
+            </div>
+
+            <NavLink href="/contact" label="Contact" />
+          </nav>
+          <div className="hidden lg:flex gap-4 items-center">
+            <Link href="/login">
+              <Heading as="h3">Log in</Heading>
+            </Link>
+            <Link href="/signup">
+              <Button variant="primary">Sign up</Button>
+            </Link>
           </div>
 
-          <NavLink href="/contact" label="Contact" />
-        </nav>
-        <div className="hidden lg:flex gap-4 items-center">
-          <Link href="/login">
-            <Heading as="h3">Log in</Heading>
-          </Link>
-          <Link href="/signup">
-            <Button variant="primary">Sign up</Button>
-          </Link>
+          {/* Mobile Toggle */}
+          <button
+            className="lg:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
-      </div>
+      </Container>
 
       {/* Mobile Menu */}
       <div
@@ -102,9 +124,7 @@ export const Header: React.FC = () => {
           <NavLink href="/contact" label="Contact" onClick={closeMenu} />
           <div className="flex flex-col lg:hidden gap-4 justify-center items-center">
             <Link href="/signup">
-              <Button variant="primary" >
-                Sign up
-              </Button>
+              <Button variant="primary">Sign up</Button>
             </Link>
             <Link href="/login">
               <Heading as="h3">Log in</Heading>

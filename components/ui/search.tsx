@@ -24,14 +24,14 @@ const SearchInput: React.FC<EmailInputProps> = ({
 
   return (
     <div
-      className={`flex items-center bg-white rounded-full shadow-md px-4 py-2 gap-2 ${className}`}
+      className={`flex items-center bg-white rounded-full px-4 py-2 gap-2 ${className}`}
     >
       <input
         type="email"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-lg px-2"
+        className="flex-1 bg-transparent outline-none text-gray-800 placeholder-gray-400 text-sm md:text-lg px-2"
       />
 
       <Button

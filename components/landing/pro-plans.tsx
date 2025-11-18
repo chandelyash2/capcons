@@ -3,20 +3,23 @@ import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
 import Image from "next/image";
 import { Slider } from "../ui/slider";
+import { Section } from "../ui/section";
 
 const ProPlans = () => {
   return (
-    <div className="space-y-6">
+    <Section>
       {/* Heading */}
-      <Heading as="h1" className="leading-tight">
-        <span className="bg-secondary-soft">Pro Plans</span> for Pros who
-        <br />
-        want more.
-      </Heading>
+      <div className="space-y-2">
+        <Heading as="h2" className="leading-tight">
+          <span className="bg-secondary-soft">Pro Plans</span> for Pros who
+          <br />
+          want more.
+        </Heading>
 
-      <Text className="text-gray-600">
-        Ready to scale? Capcons Pro unlocks advanced features
-      </Text>
+        <Text className="text-gray-600">
+          Ready to scale? Capcons Pro unlocks advanced features
+        </Text>
+      </div>
 
       {/* Desktop Images */}
       <div className="hidden lg:flex items-center justify-between gap-6">
@@ -25,7 +28,7 @@ const ProPlans = () => {
           alt="Pro1"
           width={350}
           height={350}
-          className="object-cover"
+          className="object-cover transition-all duration-300 transform hover:scale-105"
         />
 
         <Image
@@ -33,7 +36,7 @@ const ProPlans = () => {
           alt="Pro2"
           width={440}
           height={440}
-          className="object-cover"
+          className="object-cover transition-all duration-300 transform hover:scale-105"
         />
 
         <Image
@@ -41,7 +44,7 @@ const ProPlans = () => {
           alt="Pro3"
           width={350}
           height={350}
-          className="object-cover"
+          className="object-cover transition-all duration-300 transform hover:scale-105"
         />
       </div>
 
@@ -74,9 +77,8 @@ const ProPlans = () => {
             />,
           ]}
         ></Slider>
-      
       </div>
-    </div>
+    </Section>
   );
 };
 

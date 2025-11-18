@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
 import { Slider } from "../ui/slider";
+import { Section } from "../ui/section";
 
 const reviews = [
   {
@@ -25,15 +26,14 @@ const reviews = [
 
 const CustomerReviews = () => {
   return (
-    <section className="space-y-6">
-      <div className="hidden lg:block space-y-16">
+    <Section>
+      <Heading as="h2" className="text-center leading-tight">
+        See what our <span className="bg-secondary-soft px-1">Customers</span>
+        <br className="hidden md:block" /> are saying?
+      </Heading>
         {/* ========== Heading ========== */}
-        <Heading as="h1" className="text-center leading-tight">
-          See what our <span className="bg-secondary-soft px-1">Customers</span>
-          <br className="hidden md:block" /> are saying?
-        </Heading>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-2 ">
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-2 ">
           {/* ========== Left Side Quote Block ========== */}
           <div className="flex flex-col gap-2">
             <svg
@@ -92,7 +92,6 @@ const CustomerReviews = () => {
             ))}
           </div>
         </div>
-      </div>
 
       <div className="lg:hidden space-y-4">
         {" "}
@@ -134,7 +133,7 @@ const CustomerReviews = () => {
           ))}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

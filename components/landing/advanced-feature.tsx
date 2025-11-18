@@ -10,7 +10,7 @@ const AdvancedFeature = () => {
     <section className="space-y-10">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <Heading as="h1" className="leading-tight">
+        <Heading as="h2" className="leading-tight">
           Ready to scale?{" "}
           <span className="bg-secondary-soft">Capcons</span>
           <br />
@@ -18,7 +18,7 @@ const AdvancedFeature = () => {
           features
         </Heading>
 
-        <Text className="md:w-80 text-gray-700">
+        <Text className="md:w-80 text-gray-700 text-center">
           With its smart ecosystem and powerful collaboration tools, Capcons
           fuels the growth of passionate communities.
         </Text>

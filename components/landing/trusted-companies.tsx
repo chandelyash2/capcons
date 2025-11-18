@@ -15,20 +15,29 @@ const list = [
 
 const TrustedCompanies = () => {
   return (
-    <section className="space-y-8 m-0">
-      <Heading as="h3" className="text-center">The world's best companies trust Capcons.</Heading>
+    <section className="space-y-8 mt-130 md:mt-160 lg:mt-210">
+      <Heading as="h3" className="text-center">
+        The world's best companies trust Capcons.
+      </Heading>
+
       <div className="w-full overflow-hidden">
         <div className="relative flex overflow-hidden">
           {/* Track */}
           <div className="animate-scroll flex gap-16 whitespace-nowrap">
-            {/* Duplicate list for seamless looping */}
+
             {[...list, ...list].map((logo, idx) => (
-              <img
+              <div
                 key={idx}
-                src={logo}
-                className="h-8 md:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition"
-              />
+                className="h-10 md:h-12 flex items-center justify-center"
+              >
+                <img
+                  src={logo}
+                  className="max-h-full max-w-[120px] object-contain opacity-90 hover:opacity-100 transition"
+                  alt={`logo-${idx}`}
+                />
+              </div>
             ))}
+
           </div>
         </div>
       </div>

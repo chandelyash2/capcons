@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import EventCard from "@/components/blog/event-card";
 import Image from "next/image";
 import Link from "next/link";
+import { Section } from "@/components/ui/section";
 
 const tabList = [
   { name: "All" },
@@ -23,9 +24,9 @@ const Blog = () => {
 
   return (
     <Container>
-      <section className="space-y-[60px] md:space-y-[90px] lg:space-y-[140px]">
+   
         {/* ======= Featured Section ======= */}
-        <section className="space-y-3 md:space-y-4 lg:space-y-8">
+        <Section>
           <div className="relative w-full overflow-hidden h-[120px] md:h-[210px] lg:h-[370px]">
             <Link href="">
               {" "}
@@ -41,14 +42,14 @@ const Blog = () => {
 
           {/* Blog Feature Section */}
           <BlogFeature />
-        </section>
+        </Section>
 
        
 
         {/* ======= Latest Blogs ======= */}
         <LatestBlog />
         {/* <EventCard /> */}
-      </section>
+      
     </Container>
   );
 };

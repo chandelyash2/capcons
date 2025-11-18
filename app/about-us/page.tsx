@@ -1,11 +1,19 @@
-import React from 'react'
 import type { Metadata } from "next";
-import { generateWebPageSchema, generateBreadcrumbListSchema } from "@/lib/schema";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbListSchema,
+} from "@/lib/schema";
 import { IMAGES } from "@/lib/images";
-
+import { Section } from "@/components/ui/section";
+import HeroSection from "@/components/about-us/hero-section";
+import { Container } from "@/components/ui/container";
+import Progress from "@/components/about-us/progress";
+import ImportantSection from "@/components/about-us/important-section";
+import FounderSection from "@/components/about-us/founder-section";
 
 export const metadata: Metadata = {
-  title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+  title:
+    "About Capcons | Empowering Creators & Building Interest-Driven Communities",
   description:
     "Capcons fuels creators, entrepreneurs, and storytellers by enabling them to build powerful, interest-driven communities. Discover how we’re transforming social networking into culture-building for the creator economy.",
   keywords: [
@@ -23,7 +31,8 @@ export const metadata: Metadata = {
     canonical: "https://capcons.com/about-us",
   },
   openGraph: {
-    title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+    title:
+      "About Capcons | Empowering Creators & Building Interest-Driven Communities",
     description:
       "Discover how Capcons is redefining social networking — from followers to communities, from audiences to loyal circles. Join the future of creator-led culture.",
     type: "website",
@@ -39,7 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Capcons | Empowering Creators & Building Interest-Driven Communities",
+    title:
+      "About Capcons | Empowering Creators & Building Interest-Driven Communities",
     description:
       "Capcons empowers creators and brands to grow their communities, monetize creativity, and build culture-driven networks.",
     images: [IMAGES.twitter],
@@ -69,11 +79,13 @@ const About = () => {
           __html: JSON.stringify([webpageSchema, breadcrumbSchema]),
         }}
       />
-      <h1>About Us</h1>
-      <p>
-        Capcons is the all-in-one community platform empowering creators, entrepreneurs, and storytellers to grow culture-driven circles and monetize their creativity.
-      </p>
-   
+
+      <Container>
+        <HeroSection />
+        <Progress />
+        <ImportantSection />
+        <FounderSection />
+      </Container>
     </>
   );
 };

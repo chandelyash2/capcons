@@ -1,15 +1,14 @@
 import Image from "next/image";
-import React from "react";
-import { Container } from "../ui/container";
 import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
 import { ArrowUpLeft } from "lucide-react";
 import Button from "../ui/button";
 import { Slider } from "../ui/slider";
+import { Section } from "../ui/section";
 
 const BrandDetail = () => {
   return (
-    <section className="space-y-6">
+    <Section>
       <div className="flex gap-4 items-start">
         <Image
           src="https://assets.capcons.com/images/Question.png"
@@ -19,7 +18,7 @@ const BrandDetail = () => {
           className="w-[80px] h-[90px] lg:w-[120px] lg:h-[140px]"
         />
         <div className="flex flex-col justify-between gap-2">
-          <Heading as="h1" className="font-normal">
+          <Heading as="h2" className="font-normal">
             What is <br />
             <span className="bg-secondary-soft">Capcons?</span>
           </Heading>
@@ -27,87 +26,89 @@ const BrandDetail = () => {
         </div>
       </div>
 
-      {/* Main 3-Column Section */}
-      <div className="hidden lg:grid md:grid-cols-2 lg:grid-cols-3 gap-10 min-h-[650px] lg:min-h-[750px]">
-        {/* Left Column */}
-        <div className="flex flex-col justify-between">
+      <div className="hidden lg:flex items-center gap-16 min-h-[750px]">
+        {/* LEFT COLUMN */}
+        <div className="flex flex-col justify-between gap-12">
           <Image
             src="https://assets.capcons.com/images/BrandDetail.png"
-            alt="Ellipse Large"
-            width={400}
-            height={400}
-            className="w-full max-w-[450px] h-[300px] lg:h-[350px] mt-30 mx-auto"
+            alt="Brand Detail"
+            width={470}
+            height={350}
+            className="w-full h-[340px] object-contain mt-45"
           />
 
-          <div className="text-right text-2xl lg:text-3xl font-semibold relative">
+          <div className="text-right text-3xl font-normal leading-snug relative pr-4">
             Monetize Through
             <br />
             Your Community.
             <br />
             Turn engagement
             <br />
-            <span className="absolute -left-4 lg:left-20 -bottom-2 bg-secondary-soft w-12 h-12 rounded-full flex items-center justify-center">
-              <ArrowUpLeft color="white" size={28} />
+            <span
+              className="absolute -left-10 lg:left-4 -bottom-1 bg-secondary-soft 
+      w-12 h-12 rounded-full flex items-center justify-center shadow-md"
+            >
+              <ArrowUpLeft color="white" size={26} />
             </span>
-            into earning power
+            into earning power.
           </div>
         </div>
 
-        {/* Middle Column */}
-        <div className="flex flex-col justify-between items-center">
-          <div className="bg-white rounded-2xl p-6 shadow-xl space-y-4 w-[350px]">
-            <div className="flex justify-between">
+        {/* MIDDLE COLUMN */}
+        <div className="flex flex-col justify-between items-center gap-16">
+          {/* Private discussion card */}
+          <div className="bg-white rounded-2xl p-6 shadow-xl w-[250px] space-y-4">
+            <div className="flex justify-between gap-4">
               <Image
                 src="https://assets.capcons.com/images/Discussion.png"
-                alt="Discusiion Large"
+                alt="Discussion"
                 width={120}
-                height={400}
-                className="lg:w-[120px] lg:h-[200px] mx-auto"
-              />{" "}
+                height={170}
+                className="w-[120px] h-[160px] object-cover rounded-lg"
+              />
               <Image
                 src="https://assets.capcons.com/images/Discuuson1.png"
-                alt="Discussion Large"
+                alt="Discussion"
                 width={120}
-                height={400}
-                className="lg:w-[120px] lg:h-[200px] mx-auto"
+                height={170}
+                className="w-[120px] h-[160px] object-cover rounded-lg"
               />
             </div>
-            <div className="flex items-center justify-between">
-              {" "}
-              <p className="text-sm mt-3">
+
+            <div className="flex items-center justify-between pt-2">
+              <p className="text-sm leading-tight text-gray-600">
                 Private
-                <br /> Discussion
+                <br />
+                Discussion
               </p>
               <Button size="sm">End</Button>
             </div>
           </div>
 
-          {/* Gamify Badge */}
-          <Image
+          {/* Gamification badge */}
+          <img
             src="https://assets.capcons.com/images/BrandDetail4.png"
-            alt="Ellipse Large"
-            width={400}
-            height={400}
-            className="lg:w-[350px] lg:h-[400px] mx-auto"
+            alt="Gamify"
+            className="w-[300px] h-[430px] object-contain"
           />
         </div>
 
-        {/* Right Column */}
-        <div className="flex flex-col justify-between">
+        {/* RIGHT COLUMN */}
+        <div className="flex flex-col justify-between gap-12">
           <Image
             src="https://assets.capcons.com/images/BrandDetail3.png"
-            alt="Ellipse Large"
-            width={400}
-            height={400}
-            className="w-full max-w-[450px] h-[300px] lg:h-[350px] mx-auto"
+            alt="Customization"
+            width={430}
+            height={350}
+            className="w-full h-[340px] object-contain mx-auto"
           />
 
           <Image
             src="https://assets.capcons.com/images/BrandDetail2.png"
-            alt="Ellipse Large"
-            width={400}
-            height={400}
-            className="w-full max-w-[450px] h-[300px] lg:h-[350px] mx-auto"
+            alt="Go Live"
+            width={430}
+            height={350}
+            className="w-full h-[340px] object-contain mx-auto"
           />
         </div>
       </div>
@@ -142,7 +143,7 @@ const BrandDetail = () => {
           ]}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

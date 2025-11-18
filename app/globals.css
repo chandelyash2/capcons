@@ -67,7 +67,7 @@ button{
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 20s linear infinite;
 }
 .swiper-pagination-bullet {
   width: 10px;
@@ -76,4 +76,34 @@ button{
   opacity: 1;
 }
 
+@keyframes orbitOuter-desktop {
+  0% { transform: rotate(0deg) translateX(390px) translateY(14px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(390px) translateY(14px) rotate(-360deg); }
+}
+
+@keyframes orbitOuter-tablet {
+  0% { transform: rotate(0deg) translateX(310px) translateY(10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(310px) translateY(10px) rotate(-360deg); }
+}
+
+@keyframes orbitOuter-mobile {
+  0% { transform: rotate(0deg) translateX(210px) translateY(6px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(210px) translateY(6px) rotate(-360deg); }
+}
+
+/* Inner ellipse */
+@keyframes orbitInner-desktop {
+  0% { transform: rotate(0deg) translateX(305px) translateY(10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(305px) translateY(10px) rotate(-360deg); }
+}
+
+@keyframes orbitInner-tablet {
+  0% { transform: rotate(0deg) translateX(240px) translateY(8px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(240px) translateY(8px) rotate(-360deg); }
+}
+
+@keyframes orbitInner-mobile {
+  0% { transform: rotate(0deg) translateX(165px) translateY(6px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(165px) translateY(6px) rotate(-360deg); }
+}
 

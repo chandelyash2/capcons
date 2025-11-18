@@ -15,6 +15,7 @@ import ProPlans from "@/components/landing/pro-plans";
 import Founders from "@/components/landing/founders";
 import CustomerReviews from "@/components/landing/customers-reviews";
 import AdvancedFeature from "@/components/landing/advanced-feature";
+import { Container } from "@/components/ui/container";
 
 export const metadata: Metadata = {
   title: "Capcons | Build, Grow & Monetize Your Creator Community",
@@ -42,20 +43,20 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
-      <div className="space-y-20 md:space-y-28 lg:space-y-36">
+      <section className="flex flex-col gap-10 md:gap-15 lg:gap-30">
         <HeroSection />
         <TrustedCompanies />
 
         {/* SINGLE RESPONSIBLE SECTION BLOCK */}
-        <Section className="space-y-20 md:space-y-32 lg:space-y-40">
+        <Container>
           <BrandDetail />
           <MarketPlace />
           <ProPlans />
           <Founders />
           <CustomerReviews />
           <AdvancedFeature />
-        </Section>
-      </div>
+        </Container>
+      </section>
     </>
   );
 }

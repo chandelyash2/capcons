@@ -3,21 +3,19 @@ import React from "react";
 
 const Founders = () => {
   return (
-    <div className="flex items-center justify-between gap-6">
-      <Image
-        src="https://assets.capcons.com/images/Founder.png"
+    <div className="flex items-center justify-between gap-20">
+      <img
+        src="https://assets.capcons.com/images/Founder2.png"
         alt="Pro1"
-        width={700}
-        height={350}
-        className="object-center lg:h-[500px]"
+       
+        className="object-center  lg:h-[600px]"
       />
 
-      <Image
+      <img
         src="https://assets.capcons.com/images/Founder1.png"
         alt="Pro2"
-        width={700}
-        height={440}
-        className="hidden lg:flex object-cover h-[500px] rounded-[20px]"
+      
+        className="hidden lg:flex object-cover h-[600px] rounded-[20px]"
       />
     </div>
   );
