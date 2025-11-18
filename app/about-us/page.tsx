@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/container";
 import Progress from "@/components/about-us/progress";
 import ImportantSection from "@/components/about-us/important-section";
 import FounderSection from "@/components/about-us/founder-section";
+import TeamMember from "@/components/about-us/team-member";
 
 export const metadata: Metadata = {
   title:
@@ -85,6 +86,7 @@ const About = () => {
         <Progress />
         <ImportantSection />
         <FounderSection />
+      
       </Container>
     </>
   );

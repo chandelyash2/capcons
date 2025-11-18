@@ -19,7 +19,7 @@ const HeroSection = () => {
     bg-cover
     bg-center
     md:bg-contain
-    top-20 md:top-0
+    top-15 md:top-0
     overflow-hidden
     w-full
     max-w-screen       /* ⭐ prevents section from expanding beyond viewport */
@@ -34,7 +34,7 @@ const HeroSection = () => {
           relative flex items-center justify-center
 
           /* mobile (must be set!) */
-            w-[450px] h-[450px] 
+            w-[550px] h-[550px] 
 
           /* tablet */
           md:w-[650px] md:h-[650px]
@@ -56,10 +56,10 @@ const HeroSection = () => {
         </div>
 
         {/* OUTER ELLIPSE */}
-        <div className="absolute rounded-full border border-[#C9C1F7]/40 w-[95%] h-[95%]"></div>
+     <div className="absolute  rounded-full border-b border-t md:border border-[#C9C1F7]/40 w-[520px] h-[520px] md:w-[95%] md:h-[95%]"></div>
 
         {/* INNER ELLIPSE */}
-        <div className="absolute rounded-full border border-[#C9C1F7]/30 w-[75%] h-[75%]"></div>
+        <div className="absolute rounded-full border-b border-t md:border border-[#C9C1F7]/30 w-[400px] h-[400px] md:w-[75%] md:h-[75%]"></div>
 
         {/* OUTER DOT */}
         <div className="absolute lg:animate-[orbitOuter-desktop_14s_linear_infinite] md:animate-[orbitOuter-tablet_18s_linear_infinite] animate-[orbitOuter-mobile_22s_linear_infinite]">
@@ -74,7 +74,7 @@ const HeroSection = () => {
         {/* AVATARS */}
         <img
           src="https://assets.capcons.com/images/MainAvatar.png"
-          className="absolute w-20 h-20  rounded-full left-[3%]  md:left-[8%] top-[75%]"
+          className="absolute w-20 h-20  rounded-full left-[-4%]  md:left-[8%] top-[75%]"
           style={{
             filter: "drop-shadow(0 1.75px 25.204px rgba(255, 255, 255, 0.25))",
           }}
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
         <img
           src="https://assets.capcons.com/images/MainAvatar2.png"
-          className="absolute w-20 h-20 rounded-full right-[3%] md:right-[8%] top-[75%]"
+          className="absolute w-20 h-20 rounded-full right-[-4%] md:right-[8%] top-[75%]"
           style={{
             filter: "drop-shadow(0 1.75px 25.204px rgba(255, 255, 255, 0.25))",
           }}

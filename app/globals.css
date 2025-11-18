@@ -87,8 +87,8 @@ button{
 }
 
 @keyframes orbitOuter-mobile {
-  0% { transform: rotate(0deg) translateX(210px) translateY(6px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(210px) translateY(6px) rotate(-360deg); }
+  0% { transform: rotate(0deg) translateX(260px) translateY(6px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(260px) translateY(6px) rotate(-360deg); }
 }
 
 /* Inner ellipse */
@@ -103,7 +103,7 @@ button{
 }
 
 @keyframes orbitInner-mobile {
-  0% { transform: rotate(0deg) translateX(165px) translateY(6px) rotate(0deg); }
-  100% { transform: rotate(360deg) translateX(165px) translateY(6px) rotate(-360deg); }
+  0% { transform: rotate(0deg) translateX(200px) translateY(6px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(200px) translateY(6px) rotate(-360deg); }
 }
 

@@ -15,7 +15,7 @@ const list = [
 
 const TrustedCompanies = () => {
   return (
-    <section className="space-y-8 mt-130 md:mt-160 lg:mt-210">
+    <section className="space-y-8 mt-145 md:mt-160 lg:mt-210">
       <Heading as="h3" className="text-center">
         The world's best companies trust Capcons.
       </Heading>
