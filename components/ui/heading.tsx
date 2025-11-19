@@ -18,7 +18,7 @@ export const Heading = ({
   const variants = {
     h1: "text-[28px] md:text-3xl lg:text-[65px] font-normal",
     h2: "text-[20px] md:text-2xl lg:text-[50px] font-normal",
-    h3: "text-base md:text-lg font-medium",
+    h3: "text-base md:text-lg lg:text-xl font-medium",
     h4: "text-sm md:text-base font-medium",
   };
 

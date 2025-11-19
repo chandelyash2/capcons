@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Button from "./ui/button";
 import Link from "next/link";
@@ -6,13 +5,10 @@ import { Heading } from "./ui/heading";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FFF9F0] text-black border-t border-gray-200 px-10 md:px-16 my-10 md:my-20 pt-20 pb-4">
+    <footer className="bg-[#FFF9F0] text-black border-t border-gray-200 px-10 md:px-16 mt-10 md:mt-20 pt-20 pb-4">
       {/* Top Section */}
       <div className="flex flex-col items-center justify-center text-center  space-y-6">
-        <Heading
-          as="h2"
-          className="max-w-3xl"
-        >
+        <Heading as="h2" className="max-w-3xl">
           Uniting{" "}
           <span className="text-primary-900 font-semibold">Creators</span>,{" "}
           <span className="text-primary-900 font-semibold">Communities</span>,
@@ -34,7 +30,10 @@ const Footer = () => {
                 {" "}
                 <Link href="/about-us">About</Link>
               </li>
-              <li>Career</li>
+              <li>
+                {" "}
+                <Link href="/career">Carrer</Link>
+              </li>
               <li>Contact Us</li>
             </ul>
           </div>
@@ -162,7 +161,10 @@ const Footer = () => {
               <li>
                 <Link href="/about-us">About</Link>
               </li>
-              <li>Career</li>
+              <li>
+                {" "}
+                <Link href="/career">Carrer</Link>
+              </li>
               <li>Contact Us</li>
               <li className="md:hidden">Reviews</li>
             </ul>

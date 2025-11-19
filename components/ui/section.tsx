@@ -7,5 +7,5 @@ interface SectionProps {
 }
 
 export const Section = ({ children, className }: SectionProps) => {
-  return <section className="space-y-6 md:space-y-8">{children}</section>;
+  return <section className="space-y-6 md:space-y-18 my-12">{children}</section>;
 };

@@ -30,7 +30,7 @@ const BlogFeature = () => {
   return (
     <section className="w-full ">
       {/* Row layout */}
-      <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-4 lg:gap-8 overflow-hidden">
+      <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-4 lg:gap-12 overflow-hidden">
         {features.map((item, index) => (
           <Link
             href=""

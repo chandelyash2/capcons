@@ -43,7 +43,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
 
-      <section className="flex flex-col gap-10 md:gap-15 lg:gap-30">
+      <section className="flex flex-col gap-12 md:gap-15 lg:gap-18">
         <HeroSection />
         <TrustedCompanies />
 

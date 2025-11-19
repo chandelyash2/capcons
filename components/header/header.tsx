@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
   // Detect scroll position
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -57,7 +57,6 @@ export const Header: React.FC = () => {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-10 relative">
             <NavLink href="/features" label="Features" />
-            <NavLink href="/pricing" label="Pricing" />
 
             <div
               className="group/resources relative"
@@ -74,7 +73,7 @@ export const Header: React.FC = () => {
               {hoverResources && <DesktopResourcesPanel />}
             </div>
 
-            <NavLink href="/contact" label="Contact" />
+            <NavLink href="/pricing" label="Pricing" />
           </nav>
           <div className="hidden lg:flex gap-4 items-center">
             <Link href="/login">
@@ -113,7 +112,6 @@ export const Header: React.FC = () => {
       >
         <nav className="flex flex-col gap-6 p-6 font-medium pb-10">
           <NavLink href="/features" label="Features" onClick={closeMenu} />
-          <NavLink href="/pricing" label="Pricing" onClick={closeMenu} />
 
           <MobileResources
             open={resourcesOpenMobile}
@@ -121,7 +119,7 @@ export const Header: React.FC = () => {
             closeMenu={closeMenu}
           />
 
-          <NavLink href="/contact" label="Contact" onClick={closeMenu} />
+          <NavLink href="/pricing" label="Pricing" onClick={closeMenu} />
           <div className="flex flex-col lg:hidden gap-4 justify-center items-center">
             <Link href="/signup">
               <Button variant="primary">Sign up</Button>

@@ -86,7 +86,7 @@ const About = () => {
         <Progress />
         <ImportantSection />
         <FounderSection />
-      
+        <TeamMember />
       </Container>
     </>
   );
